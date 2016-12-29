@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from .views import Dashboard
 
+from .settings import DASHBOARD_NAME
+
 
 class Router(object):
     def __init__(self):
@@ -22,7 +24,7 @@ class Router(object):
 
     def get_urls(self):
         urlpatterns = [
-            url(r'^$', Dashboard.as_view(), name='dashboard'),
+            url(r'^$', Dashboard.as_view(), name=DASHBOARD_NAME),
         ]
 
         for widget, basename, parameters in self.registry:

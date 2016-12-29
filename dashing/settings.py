@@ -18,6 +18,7 @@ DEFAULTS = {
 # List of settings that may be in string import notation.
 IMPORT_STRINGS = ('PERMISSION_CLASSES',)
 
+DASHBOARD_NAME = 'django_dashing_dashboard'
 
 def perform_import(val, setting_name):
     """
